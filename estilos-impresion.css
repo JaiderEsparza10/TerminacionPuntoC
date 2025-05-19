@@ -1,0 +1,68 @@
+/* === Estilos generales para pantalla === */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+aside {
+    background-color: #eaeaea;
+    padding: 10px;
+    border-left: 4px solid #888;
+    margin-top: 20px;
+}
+
+/* === Estilos específicos para impresión === */
+@media print {
+    /* Ocultar elementos no necesarios al imprimir */
+    aside,
+    header,
+    footer {
+        display: none;
+    }
+
+    /* Ajustes del cuerpo principal */
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+        margin: 0.5cm;
+    }
+
+    /* Mostrar URLs junto a los enlaces */
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    /* Evitar saltos de página dentro de secciones */
+    section, h2, p {
+        page-break-inside: avoid;
+    }
+}

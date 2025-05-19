@@ -1,0 +1,78 @@
+/*Eliminamos margenes y padding de nuestra pagina*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* modificamos el cuerpo de nuestra pagina */
+body {
+    font-family: sans-serif; /*Añadimos un tipo de letra*/
+    margin: 0; /*Agregamos un margin*/
+    padding: 20px; /*Agregamos un padding*/
+    background-color: #494949; /*Añadimos un color de fondo*/
+    color: #ffffff; /*Color de la letra*/
+}
+/*Ahora modificamos el encabezado*/
+header {
+    text-align: center; /*Centramos el texto*/
+    margin-bottom: 20px; /*lo separamos de la parte superior de la pagina*/
+}
+
+h1 {
+    font-size: 24px; /*Tamaño de la letra*/
+}
+
+/*Ahora modificamos el boton principal*/
+/*Este es el tamaño para un dispositivo Mobil*/
+.boton-principal {
+    display: block; /*Añadimos un display block*/
+    width: 100%; /*Un anocho del 100%*/
+    padding: 15px; /*Un padding de 15*/
+    background-color: #007bff; /*Agregamos un color de fondo al boton*/
+    color: white; /*Color de la letra*/
+    border: none; /*Eliminamos el borde*/
+    border-radius: 5px; /*Redondeamos las esquinas*/
+    cursor: pointer; /*Añadimos un cursor*/
+    font-size: 18px; /*Tamaño de letra*/
+    text-align: center; /*Centramos el texto*/
+    text-decoration: none; /*Eliminamos las decoraciones*/
+}
+
+/* Ahora para aplicar el estilo mobile first, a medida que aumenta el tamaño ira cambiando el diseño con ayuda del
+media queries, este tamaño es el de una tablet 768px*/
+@media (min-width: 768px) {
+    h1 {
+        font-size: 32px; /*Aumentamos el tamaño de la letra*/
+    }
+    /*Modificamos el diseño del boton*/
+    .boton-principal { 
+        display: inline-block; /*Lo ajustamos como una linea de bloque*/
+        width: auto; /*Dejamos su ancho en automatico*/
+        padding: 10px 20px; /*Padding arriba y abajo de 10 y izquierda derecha 20*/
+        margin: 0 auto; /* Centrar el botón en pantallas más grandes */
+        background-color: red; /*Cambiamos el color de fondo del boton*/
+        color: white; /*Color de letra*/
+    }
+
+    main {
+        text-align: center; /* Centramos el botón */
+    }
+}
+
+/* Ahora ajustamos el tamaño al de un computador que seria lo mas amplio (a partir de 992px) */
+@media (min-width: 992px) {
+    body {
+        /*Añadimos un padding*/
+        padding: 50px;
+    }
+    /*Tambien modificamos un poco el estilo del boton para mostrar que si hay una diferencia*/
+    .boton-principal{
+        background-color: darkblue; /*Color de fondo*/
+        color: white; /*Color letra*/
+    }
+
+    header {
+        margin-bottom: 40px; /*Ahora subimos un poco el boton*/
+    }
+}

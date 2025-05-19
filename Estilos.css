@@ -1,0 +1,429 @@
+/*Eliminamos cualquier margin y padding de la pagina y asignamos un border box*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Ahora modificamos el titulo que esta fuera de los contenedores*/
+.Titulos-Puntos{
+    text-align: center; /*Lo centramos*/
+    font-size: 30px; /*Añadimos un tamaño a la letra*/
+    padding: 20px 0px; /*Padding arriba y abajo de 20px*/
+    font-style: italic; /*Agregamos un estilo a la letra*/
+    font-family: sans-serif; /*Cambiamos el tipo de letra*/
+}
+
+
+/*Primer punto*/
+/*Modificamos el contenedor principal*/
+.primer-punto {
+    width: 400px; /*Establecemos un Ancho*/
+    height: 400px; /*Establecemos un Alto*/
+    border: 1px solid black; /*Le asignamos un borde para poder ver el contenedor*/
+    margin: 0 auto; /*Centramos el contenedor*/
+}
+/*Ahora modificamos el texto que esta dentro de nuestro contenedor*/
+.primer-punto .Titulo-primer-punto {
+    text-align: center; /*Centramos el texto*/
+    margin-top: 180px; /*Lo separamos el borde superior del contenedor*/
+    font-family: sans-serif; /*Cambiamos su tipo de letra*/
+}
+
+/*Ahora asignamos un max de ancho*/
+@media (max-width: 768px) {
+    .primer-punto{ /*Incluimos el contenedor que vamos a utilizar*/
+        background-color: lightcoral; /*Si la anchura establecida es superada, se cambiara el color al contenedor*/
+    }
+}
+/*Ahora establecemos un minimo de anchura*/
+@media (min-width: 769px) {
+    .primer-punto{ /*Incluimos de nuevo el contenedor que vamos a utilizar*/
+        background-color: lightskyblue; /*Si el minimo es superado, se cambiara de color*/
+    }
+}
+
+/*Segundo Punto*/
+/*Modificamos el contenedor que vamos a utilizar*/
+.segundo-punto{
+    width: 400px; /*Ancho*/
+    height: 400px; /*Alto*/
+    border: 1px solid black; /*Agregamos un borde*/
+    margin: 0 auto; /*Centramos el contenedor*/
+}
+
+/*Ahora modificamos el texto que esta dentro del contenedor*/
+.segundo-punto .Titulo-segundo-punto {
+    text-align: center; /*Centramos el texto*/
+    margin-top: 150px; /*Lo separamos del borde del contenedor*/
+    font-style: normal; /*Ponemos en estilo de la letra en normal*/
+}
+
+/*Ahora usamos media queries para establecer un minimo de 768px*/
+@media (min-width: 768px){
+    /*Agregamos el contenedor a modificar*/
+    .segundo-punto{
+        background-color: red; /*Modificamos el color del contenedor cuando el ancho sea mayor de 768px*/
+        color: white; /*Cambiamos el tipo de letra*/
+        font-size: 25px; /*Cambiamos el tamaño de la fuente*/
+    }
+    /*Ahora modificamos el titulo dentro del contenedor*/
+    .segundo-punto .Titulo-segundo-punto{
+        /*Cambiamos el tipo de letra*/
+        font-family:sans-serif;
+        font-style: italic; /*Asignamos un estilo*/
+    }
+}
+/*Ahora agregamos otro minimo usando media y le asignamos un ancho mayor*/
+@media (min-width: 991px){
+    /*Incluimos el contenedor*/
+    .segundo-punto{
+        background-color: rgb(0, 102, 255); /*Cambiamos el color cuando el minimo sea superado*/
+        color: rgb(99, 23, 185); /*Cambiamos el color de la letra*/
+        font-style: normal; /*Modificamos el estilo*/
+        font-size: 30px; /*Agregamos mas tamaño a la letra*/
+    }
+    /*Ahora modificamos el titulo*/
+    .segundo-punto .Titulo-segundo-punto{
+        font-family: Georgia, 'Times New Roman', Times, serif; /*Cambiamos el tipo de letra*/
+        font-weight: bold; /*La volvemos negrilla*/
+
+    }
+}
+
+/*Ahora agregamos otro minimo pero con mayor cantidad de pixeles*/
+@media (min-width: 1200px){
+    /*Agregamos el contenedor*/
+    .segundo-punto{
+        background-color: rgb(255, 0, 212); /*Modificamos el color de fondo del contenedor*/
+        color: blue; /*Cambiamos el tipo de letra*/
+        font-style: italic; /*Asignamos un estilo cursivo*/
+    }
+    /*Ahora volvemos a modificar le titulo*/
+    .segundo-punto .Titulo-segundo-punto{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /*Cambiamos el tipo de letra*/
+        font-style: unset; /*Y asignamos otro estilo a la letra*/
+    }
+}
+
+
+
+/* EJERCICIO 3 */
+/* Modificamos el contenedor principal */
+.contenedor-enlaces{
+    background-color: darkblue; /*Color de fondo*/
+    width: 100px; /*Ancho*/
+    height: 50px; /*Alto*/
+    margin: 0 auto; /*Centramos el contenedor*/
+    border-radius: 10px; /*Añadimos un borde a las esquinas*/
+}
+/*Ahora modificamos los enlaces*/
+.titulo-enlace{
+    color: white; /*Color letra*/
+    margin-left: 10px; /*Separamos del borde izquierdo*/
+    text-decoration: none; /*Eliminamos la linea debajo del enlace*/
+    font-size: 16px ; /*Tamaño de la letra*/
+    line-height: 50px; /*Separamos del borde superior del contenedor*/
+}
+
+
+/* EJERCICIO 5 */
+/*Modificamos el contenedor principal*/
+.menu {
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+/*Ahora modificamos el nav que tiene la clase, menu-desktop*/
+.menu-desktop {
+    list-style: none; /*Eliminamos los puntos de las listas*/
+    padding: 0; /*Añadimos un padding de 0*/
+    margin: 0; /*Un margen de 0*/
+    text-align: center; /*Centramos los elementos horizontalmente en escritorio */
+}
+/*Ahora modificamos los li dentro del nav*/
+.menu-desktop li {
+    display: inline-block; /*Usamos la posición horizontal en escritorio */
+    margin: 0 15px; /*Aumentamos un poco el margen en escritorio */
+}
+/*Ahora modificamos todos los a que estan dentro de los li que estan dentro de nav*/
+.menu-desktop li a {
+    display: block; /*Los ajustamos en bloque*/
+    padding: 10px 15px; /*Aumentamos un poco el padding en escritorio */
+    text-decoration: none; /*Eliminamos las lineas de los enlaces*/
+    color: #333; /*Color de la letra*/
+}
+
+/* Estilos para tablets (desde 769px hasta 1024px de ancho) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu-desktop {
+        text-align: center; /*Mantenemos centradas la barra en tablets*/
+    }
+    /*Ahora modificamos los li*/
+    .menu-desktop li {
+        display: inline-block; /*Mantener horizontal en tablets */
+        margin: 0 10px; /*Reducimos un poco el margen para más espacio */
+    }
+    /*Ahora modificamos los a*/
+    .menu-desktop li a {
+        padding: 8px 12px; /*Reducimos un poco el padding en tablets */
+        font-size: 1.5em; /*Aumentamos un poco el tamaño de la fuente en tablets */
+        font-style: italic; /*Agregamos un estilo ladeado*/
+    }
+}
+
+/* Estilos para dispositivos móviles (hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .menu-desktop {
+        text-align: left; /*Alinear a la izquierda en móvil */
+    }
+
+    .menu-desktop li {
+        display: block; /*Disposición vertical en móvil */
+        margin: 5px 0; /*Agregamos un marger*/
+    }
+    /*Ahora modificamos los a*/
+    .menu-desktop li a {
+        padding: 10px 15px; /*Mantenemos el padding en móvil */
+        font-size: 1.5em; /*Mantenemos el tamaño de la fuente en móvil */
+        font-weight: bold; /*La volvemos negrilla*/
+    }
+}
+
+
+
+/* EJERCICIO 6 */
+.tamaño-texto{
+    text-align: center; /*Centramos el texto*/
+}
+/*Ahora lo ajustamos a la medida de una computadora*/
+@media (min-width: 1200px) {
+    .tamaño-texto {
+        font-size: 2.8em; /*Su tamaño de letra será 2.8em*/
+        font-family: Arial; /*Y su tipo de letra sera arial*/
+    }
+}
+
+/* Ahora ajustamos el tamaño de fuente para tablets */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .tamaño-texto {
+        font-size: 2.4em; /*Reducimos el tamaño de la fuente*/
+        font-family: 'Times New Roman', Times, serif; /*Cambiamos el tipo de la fuenta a times*/
+        font-style: italic; /*Y su estilo sera italica*/
+    }
+}
+
+/* Por ultimo lo ajustamos para móviles */
+@media (max-width: 768px) {
+    .tamaño-texto {
+        font-size: 2em; /*Reducimos el tamaño de la letra a 2em*/
+        font-family: sans-serif; /*El tipo de la letra sera sans */
+        font-weight: bold; /*Y será negrilla*/
+    }
+}
+
+/* EJERCICIO 8 */
+.contenedor-imagenes {
+    text-align: center; /*Centramos todo el contenido*/
+    white-space: nowrap; /*Mantiene las imágenes en línea en escritorio */
+    margin: 0; /*Usamos el margen en 0*/
+    padding: 1em; /*Un padding de 16px*/
+}
+
+.contenedor-imagenes img {
+    display: inline-block; /*Usamos display inline block para ubicarlas de manera horizontal*/
+    width: calc(33.33% - 1em); /* Tres imágenes por fila */
+    vertical-align: top; /*Lo usamos para alinear los elementos*/
+    margin: 0.5em 0; /*Usamos un margen de 0.5*/
+    max-width: 300px; /*Un ancho maximo de 300px*/
+    height: auto; /*La altura en auto*/
+    box-sizing: border-box; /*Usamos border box*/
+    border-radius: 10px; /*Redondeamos las imagenes*/
+}
+
+/*Ahora usamos un ancho maximo de 1024 para que en tablet se vean 2 columnas*/
+@media (max-width: 1024px) {
+    .contenedor-imagenes img {
+        width: calc(50% - 1em); /*Dos imágenes por fila */
+    }
+}
+
+/*Ahora usamos un ancho maximo de 768 para que en movil se vea 1 columna*/
+@media (max-width: 768px) {
+    .contenedor-imagenes {
+        white-space: normal; /*Nos ayuda apilar verticalmente */
+    }
+
+    .contenedor-imagenes img {
+        width: 100%; /*Una sola imagen por fila */
+        margin: 0.5em auto; /*las centramos */
+    }
+}
+
+/* EJERCICIO 10 */
+/* Contenedor principal del formulario */
+.contenedor-formulario {
+    max-width: 100%; /* Se adapta a cualquier tamaño de pantalla */
+    margin: auto; /* Centrado en medio de la pantalla */
+    padding: 20px; /* Espacio alrededor del formulario */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+/* Bloque donde van los campos del formulario */
+.Tipos-formulario {
+    display: block; /* En móviles, los campos aparecen uno debajo del otro */
+}
+
+/* Etiquetas como "Nombre", "Correo", etc. */
+.Tipos-formulario > label {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Un poco de espacio abajo de cada etiqueta */
+    display: block; /* Ocupan toda la línea */
+}
+
+/* Campos de texto: nombre, correo y teléfono */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding: 10px; /* Espacio adentro del campo */
+    font-size: 1em; /* Tamaño normal de texto */
+    border-radius: 5px; /* Bordes un poco redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    width: 100%; /* Ancho completo en móviles */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+}
+
+/* Botón de enviar */
+button {
+    padding: 12px; /* Relleno dentro del botón */
+    font-size: 1em; /* Tamaño normal de texto */
+    background-color: #007BFF; /* Color azul bonito */
+    color: white; /* Letra blanca */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar encima */
+    width: 100%; /* Ocupa todo el ancho en móviles */
+}
+
+/* Diseño para tablets (entre 600px y 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+    /* Mostramos los campos lado a lado */
+    .Tipos-formulario > label,
+    .Tipos-formulario > input {
+        display: inline-block; /* Uno al lado del otro */
+        width: 48%; /* Cada uno ocupa casi la mitad de la pantalla */
+        vertical-align: top; /* Alineados desde arriba */
+        margin-right: 2%; /* Pequeño espacio entre ellos */
+        margin-bottom: 10px; /* Espacio abajo */
+    }
+
+    /* El último campo antes del botón no lleva margen derecho */
+    #telefono {
+        margin-right: 0;
+    }
+
+    /* El botón sigue ocupando todo el ancho */
+    button {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Diseño para pantallas grandes (escritorio, desde 900px) */
+@media (min-width: 900px) {
+    /* Ahora mostramos tres campos por fila */
+    .Tipos-formulario > label,
+    .Tipos-formulario > input {
+        width: 31.33%; /* Cada campo ocupa un tercio del espacio */
+        display: inline-block; /* Uno al lado del otro */
+        vertical-align: top; /* Alineados desde arriba */
+        margin-right: 2%; /* Pequeño espacio entre ellos */
+        margin-bottom: 10px; /* Espacio abajo */
+    }
+
+    /* El último campo antes del botón no lleva margen derecho */
+    #telefono {
+        margin-right: 0;
+    }
+
+    /* El botón sigue ocupando todo el ancho */
+    button {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* EJERCICIO 11 */
+/* Modificamos el contendor principal de nuestro texto */
+.caja-titulo{
+    background-color: #888; /*El color del fondo*/
+    padding: 2rem; /*Añadimos un padding de 2 rem*/
+    margin: 1rem; /*Al igual que un margen*/
+    border-radius: 1rem; /*Redondeamos las esquinas*/
+    text-align: center; /*Centramos el texto*/
+}
+/*Ahora asignamos un tamaño de letra*/
+.caja-titulo h1{
+    font-size: 2rem;
+}
+/*Ahora ajustamos la medida del texto para un dispositivo movil (40rem = 640px)*/
+@media (max-width: 40rem){
+    .caja-titulo h1{
+        font-size: 1.5rem; /*Cambiamos el tipo de letra*/
+        color: white; /*Color de la letra*/
+    }
+}
+/*Ahora lo ajustamos para una tablet  (40rem = 640px y 62.4rem = 1000px*/
+@media (min-width: 40rem) and (max-width: 62.5rem) {
+    .caja-titulo h1{
+        font-size: 1.75rem; /*Ahora engrandamos un poco el tamaño de la letra*/
+        color: aqua; /*Cambiamos el color*/
+    }
+}
+/*y por ultimo, lo ajustamos al tamaño de un escritorio (62.5rem = 1000px)*/
+@media (min-width: 62.5){
+    .caja-titulo h1{
+        font-size: 2.25rem; /*Aumentamos el tamaño de la letra*/
+    }
+}
+/* EJERCICIO 12 */
+/* === Contenedor principal - reemplaza al flexbox === */
+.aplicacion {
+    min-height: 100vh; /* Altura completa de la pantalla */
+    display: block; /* Quitamos flexbox */
+    text-align: center; /* Centramos horizontalmente */
+    padding: 2rem; /* Espacio arriba y abajo */
+    box-sizing: border-box;
+}
+
+/*Modificamos la contenedor en donde estará almacenada la imagen*/
+.imgen-dispositivos {
+    background-image: url(gokunormal.jpg); /* Imagen grande para escritorio */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 70vh; /* La mitad de la altura de la pantalla */
+    max-height: 400px; /* Altura máxima en pantallas grandes */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+/* ahora ajustamos a que el minimo de la pantalla sea 992px 
+luego de que el ancho supere esta medida, se cambiara la imagen*/
+@media (min-width: 992px) {
+    .imgen-dispositivos {
+        background-image: url(gokudios.jpg); /* Cambiamos a imagen móvil */
+        height: 100vh; /* Un poco más pequeña */
+        max-height: 300px; /* Altura máxima menor */
+        width: 200px;
+    }
+}
+/*Y por ultimo para terminar de adaptarlo, cuando la medida supere 1300, se cambiara la imagen*/
+@media (min-width: 1300px) {
+    .imgen-dispositivos {
+        background-image: url(gokuultrainstinto.jpg); /* Cambiamos a imagen móvil */
+        max-height: 300px; /* Altura máxima menor */
+        width: 200px;
+    }
+}

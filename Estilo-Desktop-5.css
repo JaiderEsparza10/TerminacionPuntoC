@@ -1,0 +1,91 @@
+/*Eliminamos el padding y margin de la web*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Aplicamos unos estilos para la base para escritorio */
+body {
+    font-family: sans-serif; /*Tipo de letra*/
+    margin: 0; /*Margin en 0*/
+    background-color: #888888; /*Color de fondo*/
+    padding: 20px; /*Añadimos un padding*/
+    text-align: center; /* Centrar elementos en escritorio */
+}
+
+.contenedor {
+    width: 600px; /* Ancho fijo para escritorio */
+    margin: 50px auto; /* Centrar el contenedor en escritorio */
+    background-color: rgb(83, 83, 83); /*Color de fondo del contenedor*/
+    padding: 30px; /*Añadimos un padding*/
+    border-radius: 8px; /*Redondeamos los bordes*/
+    box-shadow: 0 5px 7px white; /*Añadimos una sombra alrededor del contenedor*/
+    color: white; /*Color de la letra*/
+}
+/*Ahora modificamos los titulos*/
+h1 { 
+    font-size: 2.5em; /*Tamaño de la letra*/
+    margin-bottom: 20px; /*Separamos un poco*/
+}
+/*Ahora agregamos los estilos para el boton*/
+/* ESTA SERIA LA CONFIGURACION PRINCIPAL DEL MENSAJE PARA UN ESCRITORO, AHORA VAMOS A USAR LA ESTRATEGIA DESKTOP FIRST */
+.boton-principal {
+    display: inline-block; /* Para poder darle padding horizontal */
+    padding: 15px 30px; /*Añadimos un padding arriba y abajo e izquierda y derecha*/
+    background-color: #007bff; /*Color del fondo del boton*/
+    color: white; /*Color de la letra*/
+    border: none; /*Eliminamos los bordes*/
+    border-radius: 5px; /*Ahora redondeamos las esquinas*/
+    cursor: pointer; /*Añadimos un cursor*/
+    font-size: 1.2em; /*Tamaño de la letra*/
+    text-decoration: none; /*Eliminamos las decoraciones*/
+}
+
+/* Aca empezamos a aplicar la estrategia Desktop-First */
+/* Estilos para tablets (hasta 768px) */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%; /* El contenedor ocupa más ancho en tablets */
+        margin: 30px auto; /*Añadimos un margen*/
+        padding: 20px; /*Añadimos un padding*/
+    }
+    /* Cambiamos el tamaño y la ubicacion del titulo */
+    h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    /*Modificamos el boton para mostrar una diferencia*/
+    .boton-principal {
+        font-family: 'Times New Roman', Times, serif; /*Tipo de la letra*/
+        padding: 12px 25px; /*Añadimos un padding*/
+        font-size: 1em; /*Cambiamos el tamaño de la letra*/
+        background-color: darkblue; /*Cambiamos el color de fondo del boton*/
+        color: white; /*Cambiamos el color de la letra*/
+    }
+}
+
+/* Ahora aplicamos el estilo para dispositivos moviles */
+/* Estilos para móviles (hasta 500px) */
+@media (max-width: 500px) {
+    .contenedor {
+        width: 95%; /* El contenedor ocupa casi todo el ancho en móviles */
+        margin: 20px auto; /*Añadimos un margen*/
+        padding: 15px; /*Un padding*/
+    }
+    /*Modificamos el titulo*/
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+    /*Ahora realizamos los cambios en el boton*/
+    .boton-principal {
+        display: block; /* El boton ocupara todo el ancho */
+        width: 100%; /*Ancho del 100%*/
+        padding: 15px; /*Un padding de 15px*/
+        text-align: center; /*Centramos el texto*/
+        background-color: white; /*Cambiamos el color de fondo*/
+        color: black; /*Color de letra*/
+        border: 2px solid black; /*Añadimos un borde*/
+    }
+}
