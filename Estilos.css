@@ -399,7 +399,7 @@ button {
 
 /*Modificamos la contenedor en donde estará almacenada la imagen*/
 .imgen-dispositivos {
-    background-image: url(gokunormal.jpg); /* Imagen grande para escritorio */
+    background-image: url(Imagenes-Pagina/gokunormal.jpg); /* Imagen grande para escritorio */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -413,7 +413,7 @@ button {
 luego de que el ancho supere esta medida, se cambiara la imagen*/
 @media (min-width: 992px) {
     .imgen-dispositivos {
-        background-image: url(gokudios.jpg); /* Cambiamos a imagen móvil */
+        background-image: url(Imagenes-Pagina/gokudios.jpg); /* Cambiamos a imagen móvil */
         height: 100vh; /* Un poco más pequeña */
         max-height: 300px; /* Altura máxima menor */
         width: 200px;
@@ -422,7 +422,7 @@ luego de que el ancho supere esta medida, se cambiara la imagen*/
 /*Y por ultimo para terminar de adaptarlo, cuando la medida supere 1300, se cambiara la imagen*/
 @media (min-width: 1300px) {
     .imgen-dispositivos {
-        background-image: url(gokuultrainstinto.jpg); /* Cambiamos a imagen móvil */
+        background-image: url(Imagenes-Pagina/gokuultrainstinto.jpg); /* Cambiamos a imagen móvil */
         max-height: 300px; /* Altura máxima menor */
         width: 200px;
     }
