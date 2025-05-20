@@ -1,4 +1,4 @@
-/* === Estilos generales para pantalla === */
+/*Aplicamos unos esilos generales a toda la pantalla */
 
 body {
     font-family: Arial, sans-serif;
@@ -32,7 +32,7 @@ aside {
     margin-top: 20px;
 }
 
-/* === Estilos específicos para impresión === */
+/* Ahora con ayuda de @media print, pondremos los estilos a la hora de imprimir */
 @media print {
     /* Ocultar elementos no necesarios al imprimir */
     aside,
@@ -41,7 +41,7 @@ aside {
         display: none;
     }
 
-    /* Ajustes del cuerpo principal */
+    /* Ajustamos el cuerpo principal de la impresión*/
     body {
         font-size: 12pt;
         color: black;
@@ -49,19 +49,19 @@ aside {
         margin: 0.5cm;
     }
 
-    /* Mostrar URLs junto a los enlaces */
+    /*Ahora mostramos la url con los enlaces*/
     a::after {
         content: " (" attr(href) ")";
         font-size: 10pt;
         color: black;
     }
-
+    /* Modificamos los enlaces y le asignamos un color  */
     a {
         color: black;
         text-decoration: none;
     }
 
-    /* Evitar saltos de página dentro de secciones */
+    /*Y usando page break, eliminamos los posibles saltos de lineas que se generen*/
     section, h2, p {
         page-break-inside: avoid;
     }

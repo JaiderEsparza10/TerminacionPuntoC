@@ -427,3 +427,21 @@ luego de que el ancho supere esta medida, se cambiara la imagen*/
         width: 200px;
     }
 }
+
+/* MODIFICACIÓN AL PUNTO 9 */
+/* Ahora modificamos el contenedor de nuestro link */
+.contenedor-punto-nueve{
+    text-align: center; /*Centramos el texto*/
+    background-color: darkblue; /*Color de fondo*/
+    width: 200px; /*Ancho*/
+    margin: 0 auto; /*Centramos el contenedor*/
+    padding: 10px; /*Agregamos padding*/
+    border-radius: 10px; /*Y redondeamos los bordes*/
+}
+/*Ahora modificamos el a que contendra nuestro link*/
+.contenedor-punto-nueve a{ 
+    color: white; /*Color de la letra*/
+    text-decoration: none; /*Eliminamos las lineas de debajo*/
+    font-size: 18px; /*Tamaño de la letra*/
+    font-family: sans-serif; /*Tipo de letra*/
+}
